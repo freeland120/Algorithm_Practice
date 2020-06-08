@@ -31,6 +31,7 @@ public class Test_Sort_String {
 		
 		String str1[]= {"sun","bed","car"};
 		String str2[]= {"abce","abcd","cdx"};
+		String str3[]= {"abce","abcd","abcdf"};
 		
 		
 		int x = input.nextInt();
