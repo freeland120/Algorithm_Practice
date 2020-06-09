@@ -38,7 +38,7 @@ public class Test_K_Number {
 		int z = input.nextInt();
 		
 		
-		System.out.println(c.k_number(str1, x));
+		//System.out.println(c.k_number(str1, x));
 		
 		
 	}
