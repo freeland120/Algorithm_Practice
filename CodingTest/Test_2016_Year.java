@@ -6,7 +6,7 @@ public class Test_2016_Year {
 
 	public String year_2016(int a, int b) {
 		
-		String day[]= {"Monday","Tuesday","Wednesday","Thursday","Friday","Sathurday","Sunday"};
+		String day[]= {"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Sathurday"};
 		int month[]= {31,29,31,30,31,30,31,31,30,31};
 		String year[]=new String[366];
 		
