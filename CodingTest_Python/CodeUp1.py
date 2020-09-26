@@ -414,12 +414,22 @@
 # print(result)
 
 
+# a, b = list(map(int,input().split()))
+
+# pay = 0
+
+# def price_mul(price,a):
+#     pay = price * a
+#     return pay
+# print("지급할 금액:", price_mul(a,b))
+
+
+
+
 ##1059
-a, b = list(map(int,input().split()))
 
-pay = 0
+n = int(input())
 
-def price_mul(price,a):
-    pay = price * a
-    return pay
-print("지급할 금액:", price_mul(a,b))
+print(~n)
+
+
