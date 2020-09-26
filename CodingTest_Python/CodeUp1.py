@@ -428,8 +428,266 @@
 
 ##1059
 
-n = int(input())
+# n = int(input())
 
-print(~n)
+# print(~n)
 
 
+##1060~62(비트 연산자 부분으로 안품)
+
+
+##1063
+# a, b = list(map(int,input().split()))
+
+
+# print(a if a>b else b) 
+
+
+##1064
+
+# a, b, c = list(map(int,input().split()))
+
+# result = min(a,b,c)
+
+# print(result)
+
+##1065
+# a, b, c = list(map(int,input().split()))
+
+# for i in a,b,c :
+
+#     if i % 2 == 0:
+#         print(i)
+    
+##1066
+# a , b, c = list(map(int,input().split()))
+
+# for i in a,b,c:
+#     if i % 2 ==0:
+#         print("even")
+#     else:
+#         print("odd")
+
+
+##1067
+
+# a = int(input())
+
+# if a > 0:
+#     print("plus")
+#     if a % 2 == 0:
+        
+#         print("even")
+#     else:
+#         print("odd")
+# elif a < 0:
+#     print("minus")
+#     if a % 2 == 0:
+#         print("even")
+#     else:
+#         print("odd")
+
+
+##1068
+
+# n = int(input())
+
+# if n >= 90:
+#     print("A")
+# elif n >= 70:
+#     print("B") 
+# elif n >= 40:
+#     print("C") 
+# else:
+#     print("D")
+
+
+##1069
+# a = input()
+
+# if a == 'A':
+#     print("best!!!")
+# elif a == 'B':
+#     print("good!!") 
+# elif a == 'C':
+#     print("run!") 
+# elif a == 'D':
+#     print("slowly~")
+# else:
+#     print("what?")
+
+
+
+# x = input()
+
+# def switch(x):
+#     result = {'A':'best!!!', 'B':'good!!!', 'C':'run!', 'D':'slowly~'}.get(x,'what?')
+#     return result
+
+# print(switch(x))
+
+
+
+
+
+##1070
+# n = int(input())
+
+# if n == 12 or n == 1 or n == 2:
+#     print("winter")
+# elif n == 3 or n == 4 or n == 5:
+#     print("spring")
+# elif n == 6 or n == 7 or n == 8:
+#     print("summer")
+# elif n == 9 or n == 10 or n == 11:
+#     print("fall")
+
+
+
+##1071
+
+# n = list(map(int,input().split()))
+
+
+# for i in n :
+#     if i != 0:
+#         print(i)
+#     else:
+#         break
+
+##1072
+# N = input()
+
+# n = list(map(int,input().split()))
+
+# for i in n :
+#     print(i)
+
+##1073
+
+# n = list(map(int,input().split()))
+
+# for i in n:
+#     if i != 0:
+#         print(i)
+#     else:
+#         break
+
+##1074
+
+# n = int(input())
+
+# while n >= 1:
+#     print(n)
+
+#     n -= 1
+
+
+##1075
+
+# n = int(input())
+
+# while n >= 0:
+#     if n == 0 :
+#         break
+#     else:
+#         print(n-1)
+#         n -= 1
+
+
+##1076
+
+
+# a = ord(input())
+# b = ord('a')
+
+
+# while a >= b:
+#     print(chr(b), end = " ")
+#     b += 1
+
+
+##1077
+
+
+# n = int(input())
+
+# n2 = int(0)
+
+
+# while n >= n2 :
+#     print(n2)
+#     n2 += 1
+
+
+# n = int(input())
+
+
+# for i in range(n+1):
+#     print(i)
+
+
+##1078
+
+# n = int(input())
+
+# sum = 0
+
+# for i in range(1,n+1):
+#     if( i % 2 == 0):
+#         sum += i
+#         #print(sum + "+" + i + "=")
+#     else:
+#         continue
+
+# print(sum)
+
+
+
+##1079
+# char = list(map(str,input().split()))
+
+# for i in char:
+#     if i == 'q':
+#         print(i)
+#         break
+#     else:
+#         print(i)
+
+
+##1080
+
+# n = int(input())
+
+# sum = 0
+
+# for i in range(1,n):
+#     sum += i
+    
+#     if sum >= n:
+#         print(i)
+#         break
+
+    
+
+##1081
+# n, m = list(map(int,input().split()))
+
+# for i in range(1,n+1):
+#     for j in range(1,m+1):
+#         print(i,j)
+
+
+
+##1082
+
+# a = int(input(),16)
+
+# b = hex(a)[2].upper()
+
+
+# for i in range(1,16):
+#     c = hex(i)[2:].upper()
+#     d = hex(a*i)[2:].upper()
+    
+#     print(b + "*" + c + "=" + d)
