@@ -88,7 +88,17 @@ for i in range(ans):
 	else:
 		print("")
 
-
+# 10
+# CALL 010-4169-5319
+# SMS 010-4269-5319
+# SMS 010-4369-5319
+# CALL 010-4569-5319
+# CALL 010-4269-5319
+# CALL 010-4169-5319
+# CALL 010-4769-5319
+# CALL 010-4869-5319
+# SMS 010-4969-5319
+# CALL 010-4069-5319
 
 
 
@@ -133,7 +143,7 @@ if pw1 != pw2:
 if ans:
 	print("pass")
 else:
-  print("fail")
+	print("fail")
 
 
 
