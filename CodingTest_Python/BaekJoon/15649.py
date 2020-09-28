@@ -9,7 +9,7 @@ data = []
 
 for i in range(1,N+1):  
     data.append(i)
-print(data)
+
 
 
 P = permutations(data,M)    
