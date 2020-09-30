@@ -59,26 +59,26 @@
 #     #기저
 #     #재귀
 
-arr = []
-n = 0
+# arr = []
+# n = 0
 
-def recur(cur):
-    for i in range(cur-1):
-        if cur-1 - i == abs(arr[i] - arr[cur-1]):
-            return
+# def recur(cur):
+#     for i in range(cur-1):
+#         if cur-1 - i == abs(arr[i] - arr[cur-1]):
+#             return
 
-        if cur == n:
-            cnt += 1
-            return
-        for i in range(n):
-            if visited[i]:
-                continue
+#         if cur == n:
+#             cnt += 1
+#             return
+#         for i in range(n):
+#             if visited[i]:
+#                 continue
 
-            visited[i] = True
-            arr.append(i)
-            recur(cur+1)
-            arr.pop()
-            visited[i] = False
+#             visited[i] = True
+#             arr.append(i)
+#             recur(cur+1)
+#             arr.pop()
+#             visited[i] = False
 
 
 
