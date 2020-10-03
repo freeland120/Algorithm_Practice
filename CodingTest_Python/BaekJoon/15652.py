@@ -1,21 +1,36 @@
+# from itertools import combinations_with_replacement
+
+
+# N, M = map(int,input().split())
+
+# data = []
+
+# for i in range(1,N+1):
+#     data.append(i)
+
+
+
+# CWR = combinations_with_replacement(data,M)
+
+
+# for i in CWR:
+#     print(' '.join(map(str,i)))
+
+
+
 from itertools import combinations_with_replacement
 
-
-N, M = map(int,input().split())
+N,M = map(int,input().split())
 
 data = []
 
 for i in range(1,N+1):
     data.append(i)
 
-
-
 CWR = combinations_with_replacement(data,M)
-
 
 for i in CWR:
     print(' '.join(map(str,i)))
-
 
 # N과 M (4)
 # 이 문제는 자연수 N,M이 주어졌을때 1부터 N까지 자연수 중에서 

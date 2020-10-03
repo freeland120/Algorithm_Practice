@@ -1,23 +1,24 @@
 
 
 
-from itertools import permutations
+# from itertools import permutations
 
-N, M = map(int,input().split())    
+# N, M = map(int,input().split())    
 
-data = []  
+# data = []  
 
-for i in range(1,N+1):  
-    data.append(i)
+# for i in range(1,N+1):  
+#     data.append(i)
 
 
 
-P = permutations(data,M)    
+# P = permutations(data,M)    
                             
 
-for i in P:
-    print(' '.join(map(str,i)))  
+# for i in P:
+#     print(' '.join(map(str,i)))  
                                 
+
 
 
 

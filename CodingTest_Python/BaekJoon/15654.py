@@ -1,20 +1,35 @@
+# from itertools import permutations
+
+
+# N, M = map(int,input().split())
+
+# data = list(map(int,input().split()))
+
+# data.sort()
+
+
+# P = permutations(data,M)
+
+
+# for i in P:
+#     print(' '.join(map(str,i)))
+
+
+
 from itertools import permutations
 
-
-N, M = map(int,input().split())
+N,M = map(int,input().split())
 
 data = list(map(int,input().split()))
 
 data.sort()
 
-
 P = permutations(data,M)
+
 
 
 for i in P:
     print(' '.join(map(str,i)))
-
-
 
 
 # N과 M (5)

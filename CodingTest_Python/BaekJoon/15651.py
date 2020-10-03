@@ -1,8 +1,27 @@
+# from itertools import product
+
+
+# N, M = map(int,input().split())
+
+
+# data = []
+
+
+# for i in range(1,N+1):
+#     data.append(i)
+
+
+# Pd = product(data,repeat = M)
+
+
+# for i in Pd:
+#     print(' '.join(map(str,i)))
+
+
+
 from itertools import product
 
-
 N, M = map(int,input().split())
-
 
 data = []
 
@@ -11,10 +30,9 @@ for i in range(1,N+1):
     data.append(i)
 
 
-Pd = product(data,repeat = M)
+Pr = product(data,repeat=M)
 
-
-for i in Pd:
+for i in Pr:
     print(' '.join(map(str,i)))
 
 

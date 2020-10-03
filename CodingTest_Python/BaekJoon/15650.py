@@ -1,11 +1,30 @@
-from itertools import combinations
+# from itertools import combinations
 
+
+# N, M = map(int,input().split())
+
+
+# data = []
+
+
+# for i in range(1,N+1):
+#     data.append(i)
+
+
+# C = combinations(data,M)
+
+
+# for i in C:
+#     print(' '.join(map(str,i)))
+
+
+
+from itertools import combinations
 
 N, M = map(int,input().split())
 
 
 data = []
-
 
 for i in range(1,N+1):
     data.append(i)
@@ -13,10 +32,8 @@ for i in range(1,N+1):
 
 C = combinations(data,M)
 
-
 for i in C:
     print(' '.join(map(str,i)))
-
 
 # N과 M (2)
 # 이 문제는 자연수 N,M이 주어졌을때 1부터 N까지 자연수 중에서 

@@ -1,31 +1,49 @@
 
-import math
+# import math
 
 
-def Amazing_Prime(num):
-    for i in range(2, math.floor(math.sqrt(int(num)))+1):
-        if int(num) % i == 0:
-            return
+# def Amazing_Prime(num):
+#     for i in range(2, math.floor(math.sqrt(int(num)))+1):
+#         if int(num) % i == 0:
+#             return
     
-    if len(num) == n:
-        print(num)
-        return
+#     if len(num) == n:
+#         print(num)
+#         return
 
-    for j in prime:
-        Amazing_Prime(num+j)
-
-
-
-n = int(input())
-
-start = ['2','3','5','7']
-prime = ['1','3','7','9']
-
-for s in start:  
-    Amazing_Prime(s)
+#     for j in prime:
+#         Amazing_Prime(num+j)
 
 
 
+# n = int(input())
+
+# start = ['2','3','5','7']
+# prime = ['1','3','7','9']
+
+# for s in start:  
+#     Amazing_Prime(s)
+
+
+
+
+
+# import math
+
+
+
+# def Amazing_Prime_Number(param):
+
+
+
+# N = int(input())
+
+# start = ['2','3','5','7']
+# prime = ['1','3','7','9']
+
+
+# for i in start:
+#     Amazing_Prime_Number(i)
 
 
 
