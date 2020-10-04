@@ -21,6 +21,19 @@
 #         visited[i] = False
 
 
+# def cur(depth):
+#     if depth == n:
+#         return
+    
+#     for i in range(n):
+#         if visited[i]:
+#             continue
+    
+#         visited[i] == True
+#         arr.append(i)
+#         cur(depth+1)
+#         arr.pop()
+#         visited[i] = False
 
 
 # def n_queens(i,col): 
@@ -67,81 +80,92 @@
 
 
 
+cnt = 0
 
-
-def n_queens(i,col):
-    n = len(col) - 1
-
-    if promising(i,col):
-        if i == n:
-            print(col[1:n+1])
-        else:
-            for j in range(1,n+1):
-                col[i+1] = j
-                n_queens(i+1,col)
-
-def promising(i,col):
-    k = 1
-    flag = True
-
-    while(k<i and flag):
-        if ( col[i]==col[k] or abs(col[i]-col[k]) == (i - k)):
-            flag = False
-        k += 1
-    return flag    
+import time
 
 
 
+# def n_queens(i,col):
+#     global cnt
+
+#     n = len(col) - 1
+
+#     if promising(i,col):
+#         if i == n:
+#             cnt += 1
+#             #print(col[1:n+1])
+
+#         else:
+#             for j in range(1,n+1):
+#                 if col[j] == 1:
+#                     continue
+#                 col[j] = 1
+#                 n_queens(i+1,col)
+#                 col[j] = 0
+
+
+# def promising(i,col):
+#     k = 1
+#     flag = True
+
+#     while(k<i and flag):
+#         if ( col[i]==col[k] or abs(col[i]-col[k]) == (i - k)):
+#             flag = False
+#         k += 1
+#     return flag    
+
+
+
+
+# n = int(input())
+
+
+# col = [0] * (n+1)
+
+
+# n_queens(0,col)
+# print(cnt)
+
+
+
+
+
+cnt = 0
+def recur(depth):
+    global cnt
+    if depth == n:
+        cnt += 1
+        return
+
+    for i in range(n):
+        if visited[i]:
+            continue
+    
+        visited[i] = True
+        arr.append(i)
+        recur(depth+1)
+        arr.pop()
+        visited[i] = False
 
 n = int(input())
 
+arr = []
 
-col = [0] * (n+1)
+visited = [0] * 20
 
-
-n_queens(0,col)
-
-
+recur(0)
 
 
 
 
 
 
-def n_queens(i,col):
-    n = len(col) - 1
-    
-    if promising(i,col):
-        
-        if i == n:
-            print(col[1:n+1])
-            
-            
-        else:
-            for j in range(1,n+1):
-                col[i+1] = j
-                n_queens(i+1,col)
-                
-    
 
 
-def promising(i,col):
-    k = 1
-    flag = True
-   
-    while k<i and flag:
-        if (col[i]==col[k] or abs( col[i]-col[k] == (i-k) )):
-            flag = False
-        k += 1
-    
-    return flag 
 
 
-n = int(input())
 
-col = [0] * (n+1)
-
-n_queens(0,col)
 
 
 
