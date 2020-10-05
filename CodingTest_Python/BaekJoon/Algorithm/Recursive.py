@@ -16,10 +16,6 @@
 
 # recursive_function(1)
 
-
-
-
-
 #팩토리얼 구현 예제
 
 # 1.반복적으로 구현한 n!
@@ -47,3 +43,49 @@
 
 # N= int(input())
 # print(factorial_function2(N))
+
+
+
+
+
+# def factorial(n):
+
+#     if n == 0:
+#         return 1
+#     if n == 1:
+#         return 1
+    
+#     result = n * factorial(n-1)
+#     return result
+
+
+# def permutation(n,r):
+
+#     if n < r:
+#         return None
+    
+#     numerator = factorial(n)
+#     dominator = factorial(n-r)
+
+#     result2 = numerator//dominator
+#     return result2
+
+
+# def combination(n,r):
+
+#     if n < r:
+#         return None
+    
+#     numerator = permutation(n,r)
+#     dominator = factorial(r)
+
+#     result3 = numerator // dominator
+#     return result3
+
+# x = int(input())
+# y,z = map(int,input().split())
+
+# print("입력한 팩토리얼 값은:",factorial(x))
+# print("입력한 순열의 값은:",permutation(y,z))
+# print("입력한 조합의 값은:",combination(y,z))
+

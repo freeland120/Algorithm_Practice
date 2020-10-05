@@ -35,3 +35,29 @@
 # i를 뽑아낼 때 tuple => str로 map메서드를 사용
 # join메서드를 사용하는 이유는 리스트의 요소를 공백기준으로 연결해 문자열로 만들기 위함
 
+
+
+
+def recur(depth):
+    if depth == N:
+        print(arr)
+        return
+    
+    for i in range(1,N+1):
+        if visited[i]:
+            continue
+
+        visited[i] = True
+        arr.append(i)
+        recur(depth+1)
+        arr.pop()
+        visited[i] = False
+
+
+N,M = map(int,input().split())
+
+visited = [0] * (N+1)
+arr = []
+
+
+recur(0)
