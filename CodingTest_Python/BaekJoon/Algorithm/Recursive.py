@@ -16,7 +16,7 @@
 
 # recursive_function(1)
 
-#팩토리얼 구현 예제
+# 팩토리얼 구현 예제
 
 # 1.반복적으로 구현한 n!
 # def factorial_function1(n):
@@ -59,33 +59,62 @@
 #     return result
 
 
-# def permutation(n,r):
+def permutation(n,r):
 
-#     if n < r:
-#         return None
+    if n < r:
+        return None
     
-#     numerator = factorial(n)
-#     dominator = factorial(n-r)
+    numerator = factorial(n)
+    dominator = factorial(n-r)
 
-#     result2 = numerator//dominator
-#     return result2
+    result2 = numerator//dominator
+    return result2
 
 
-# def combination(n,r):
+def combination(n,r):
 
-#     if n < r:
-#         return None
+    if n < r:
+        return None
     
-#     numerator = permutation(n,r)
-#     dominator = factorial(r)
+    numerator = permutation(n,r)
+    dominator = factorial(r)
 
-#     result3 = numerator // dominator
-#     return result3
+    result3 = numerator // dominator
+    return result3
 
-# x = int(input())
-# y,z = map(int,input().split())
+x = int(input())
+y,z = map(int,input().split())
 
 # print("입력한 팩토리얼 값은:",factorial(x))
 # print("입력한 순열의 값은:",permutation(y,z))
 # print("입력한 조합의 값은:",combination(y,z))
 
+
+answer = 10000000000000000
+
+def recur(cur,cnt,x,y):
+    global answer
+    if cur == n:
+
+        if cnt == 0:
+            return
+        answer = min(answer,abs(x-y))
+    
+        return
+
+    recur(cur+1,cnt+1,x*arr[cur][0],y+arr[cur][1])
+    recur(cur+1,cnt,x,y)
+
+
+n = 4
+
+arr = [[1,7],[2,6],[3,8],[4,9]]
+
+
+
+recur(0,0,1,0)
+
+print(answer)
+
+
+#flood fill 알고리즘
