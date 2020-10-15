@@ -101,35 +101,59 @@
 
 
 
-def recur(cur,cnt):
+# def recur(cur,cnt):
 
-    if cnt > k:       # 더 많이 고른걸 컷팅하는것이고
-        return
+#     if cnt > k:       # 더 많이 고른걸 컷팅하는것이고
+#         return
 
-    if cur == n:
-        if cnt <= 1: # 여기는 더 적게 고른걸 가지치기하는것이라고 생각하면 됨
-            return
-        print(arr)
-        return
+#     if cur == n:
+#         if cnt <= 1: # 여기는 더 적게 고른걸 가지치기하는것이라고 생각하면 됨
+#             return
+#         print(arr)
+#         return
 
     
 
-    arr.append(cur)
-    recur(cur+1,cnt+1)
-    arr.pop()
-    recur(cur+1,cnt)
+#     arr.append(cur)
+#     recur(cur+1,cnt+1)
+#     arr.pop()
+#     recur(cur+1,cnt)
 
 
 
 
 
 
-n = 4 
-k = 2
+# n = 4 
+# k = 2
 
-arr = []
-recur(0,0)
+# arr = []
+# recur(0,0)
 
+
+
+def solution(s):
+    ans = 0
+    num = list(reversed(s))
+    num_dic = {}
+
+    for i in range(10):
+        num_dic[str(i)] = i
+
+    for i, n in enumerate(num):
+        if n == "-":
+            ans *= -1
+        elif n == "+":
+            continue
+        else:
+            ans += num_dic[n]*(10**i)
+    return ans
+        
+
+s = input()
+
+
+print(solution(s))
 
 
 

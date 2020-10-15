@@ -2,23 +2,47 @@
 
 
 
+# def recur(depth):
+#     if depth == n:
+#         for i in arr:
+#             print(i,end=" ")
+#         print()
+#         return
+    
+#     for i in range(k):
+#         arr.append(i)
+#         recur(depth+1)
+#         arr.pop()
+
+
+
+
+# arr =[]
+# n,k = map(int,input().split())
+
+
+# recur(0)
+
+
+
+
+
 def recur(depth):
-    if depth == n:
+    if depth == n :
         for i in arr:
             print(i,end=" ")
         print()
         return
+
     
-    for i in range(1,k):
+    for i in range(k):
         arr.append(i)
         recur(depth+1)
         arr.pop()
 
 
-
-
-arr =[]
 n,k = map(int,input().split())
 
+arr = []
 
 recur(0)
