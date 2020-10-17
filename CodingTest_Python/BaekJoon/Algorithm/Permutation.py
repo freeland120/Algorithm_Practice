@@ -56,7 +56,7 @@ recur(0)
 # recur(0)
 
 
-# n자리 n진수 순열 뽑아내기
+# n자리 m진수 순열 뽑아내기
 # def recur(depth):
 #     if depth == n:
 #         print(arr)

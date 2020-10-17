@@ -27,3 +27,8 @@ def solve(cnt, s):
 solve(0, "")
 print(mx)
 print(mn)
+
+
+
+
+이 문제 같은 경우 순열을 이용한 풀이, 백트래킹을 이용한 풀이 2가지 방법이 가능하다.
