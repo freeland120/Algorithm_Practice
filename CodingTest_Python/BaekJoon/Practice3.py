@@ -1,20 +1,81 @@
-def start_num(x):
-    ret = 0
-    while(x > 0):
-        ret = x % 10
-        x //= 10
-    return ret
 
-n = int(input())
-ans = 1
-cnt = -1
 
-for i in range(n):
-    if(start_num(ans) == 1):
-        cnt += 1
-    ans *= 5
 
-print("0.", end="")
-for i in range(cnt):
-    print(0, end="")
-print(ans)
+
+
+# arr = [2,1,2,3,4,5,4,3]
+
+
+# n = int(input())
+
+
+# result  = n % 8
+
+# print(arr[result])
+
+
+
+
+# # a ^= b
+# # b ^ = a
+# # a ^= b
+
+# a = 1
+# a /= 3
+# b = a
+# c = a
+
+# if a+b+c == 1:
+#     print(1)
+# else:
+    # print(0)
+
+
+
+
+
+def recur(depth):
+    if depth == n:
+       
+        for i in arr:
+            print(i,end=" ")
+        print()
+        return
+
+    
+    for i in range(k)[::-1]:
+        arr.append(i)
+        recur(depth+1)
+        arr.pop()
+
+
+
+n,k = map(int,input().split())
+
+arr = []
+
+
+recur(0)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

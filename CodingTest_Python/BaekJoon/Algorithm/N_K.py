@@ -1,6 +1,6 @@
 #n자리 k진수 만드는 방법 공식 외워!!!!
 
-
+#첫번째 공식
 
 # def recur(depth):
 #     if depth == n:

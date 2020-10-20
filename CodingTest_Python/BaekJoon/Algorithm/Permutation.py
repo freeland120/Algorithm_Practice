@@ -1,5 +1,8 @@
 #n자리 k진수를 이용해서 중복을 허용하지 않는 기본형 "순열(Permutation)"만들기
 
+
+
+#두 번째 공식
 def recur(depth):
     if depth == k:
         for i in range(k):

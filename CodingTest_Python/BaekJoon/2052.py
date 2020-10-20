@@ -40,3 +40,29 @@ print("0.", end="")
 for i in range(cnt):
     print(0, end="")
 print(ans)
+
+
+
+
+
+
+
+#배열로 푼거
+n = int(input())
+
+answer = 1
+for i in range(n):
+    answer *= 5
+
+arr = [0]*n
+
+arr[n-1] = answer
+
+for i in range(n-1, 0, -1):
+    arr[i-1] = arr[i] // 10
+    arr[i] %= 10
+
+
+print("0.",end="")
+for i in arr:
+    print(i,end="")

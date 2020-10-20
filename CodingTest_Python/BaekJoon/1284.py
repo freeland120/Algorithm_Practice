@@ -11,10 +11,11 @@ while True:
         break
 
     
-
+    size = [4,2,3,3,3,3,3,3,3,3]
     
     total = len(Input)+1
     for i in Input:
+        total += size[int(i)]
         if i == "0":
             total += 4
         elif i == "1":
