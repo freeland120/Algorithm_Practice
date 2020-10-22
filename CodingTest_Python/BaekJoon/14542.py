@@ -1,47 +1,28 @@
+#Outer triangle sum
 
 
-
-
-
-# arr = []
-
-
-# arr.append(list(map(int,input().split())))
-
-# print(arr[0][0]+arr[0][-1])
-
-
-arr = []
+ans = []
 
 while True:
     n = int(input())
-    
-    
+    total1 = 0
+    arr = []
+
     if n == 0:
         break
-
-    for i in range(1,n+1):
+    
+    for i in range(n):
         data = list(map(int,input().split()))
         arr.append(data)
 
-    total = 0
     for i in range(n):
-        if len(arr[i]) == 1 or len(arr[i]) == n:
-            total += arr[i][i]
+        if i == 0 or i == 1 or i == n-1:
+            total1 += sum(arr[i])
+        else:
+            total1 += (arr[i][0]+arr[i][-1])
+
+    ans.append(total1)
 
 
-
-
-# total = 0
-
-# for i in range(n):
-#     if i == 0:
-#         total += arr[0][0]
-#     elif i == n-1:
-#         for i in arr:
-#             total += i
-#     else:
-#         total += arr[i][0] + arr[i][-1]
-
-
-# print(total)
+for i in range(len(ans)):
+    print("Case #%d:%d" %(i+1,ans[i]))
