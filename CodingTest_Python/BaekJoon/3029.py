@@ -1,16 +1,20 @@
+# python3
+
 import sys
 
-a, b, c = map(int, sys.stdin.readline().split(':'))
-d, e, f = map(int, sys.stdin.readline().split(':'))
-
-first_time = a*3600+b*60+c
-second_time = d*3600+e*60+f
-"3".zfill(5)
-if first_time == second_time:
-    print('00:00:01')
-elif first_time > second_time:
-    time = 24*60*60-first_time+second_time
-    print(str(time//3600).zfill(2), ':', str((time-(3600*(time//3600)))//60).zfill(2), ':', str(time%60).zfill(2), sep='')
-else:
-    time = second_time - first_time
-    print(str(time//3600).zfill(2), ':', str((time-(3600*(time//3600)))//60).zfill(2), ':', str(time%60).zfill(2), sep='')
+stime = sys.stdin.readline().strip().split(":")
+ftime = sys.stdin.readline().strip().split(":")
+second = int(ftime[2]) - int(stime[2])
+minute = int(ftime[1]) - int(stime[1])
+hour = int(ftime[0]) - int(stime[0])
+if second < 0:
+	second += 60
+	minute -= 1
+if minute < 0:
+	minute += 60
+	hour -= 1
+if hour < 0:
+	hour += 24
+if hour == minute == second == 0:
+	hour += 24
+print("%02d"%hour+":"+"%02d"%minute+":"+"%02d"%second)
