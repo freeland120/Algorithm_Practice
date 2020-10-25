@@ -8,7 +8,7 @@ def recur(depth,start):
         print()
         return
 
-    
+
 
     for i in range(start,n+1):
         if visited[i]:

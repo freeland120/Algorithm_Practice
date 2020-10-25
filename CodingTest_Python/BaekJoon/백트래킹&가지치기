@@ -1,0 +1,165 @@
+1.분할정복기법
+2.동적계획법
+3.탐욕범
+이 알고리즘 3개가 3대장이라고 할 수 있고
+임의의 집합(set)에서 주어진 기준(criterion)대로 원소의 순서(sequence)를 선택하는
+문제를 푸는데 적합하다.
+트리 자료구조의 변형된 깊이우선탐색(DFS)
+모든 문제 사례에 대해서 효율적이지 않지만, 많은 문제 사례에 대해 효율적
+상태공간트리(State Space Tree)
+상태 공간 : 해답을 탐색하기 위한 탐색 공간
+상태 공간트리 : 탐색 공간을 트리 형태의 구조로 암묵적으로 해석
+
+자아 이제 백트랙킹 문제를 보게되면 이렇게 시작하는거다.
+1.어떤 문제를 "상태공간트리"로 해석해서 생각하고 
+2.깊이 우선 탐색으로 탐색
+3.그런데, 깊이 우선 탐색으로 전체 탐색을 하게되는 경우, 단순 무식한 방법이다.
+방문 중인 노드에서 더 하위 노드로 가면 해답이 없을 경우,
+해당 노드의 하위 트리를 방문하지 않고 부모 노드로 되돌아감(backtrack)
+
+
+그래서 효율적인 알고리즘을 짜기 위해서 "전체 탐색"을 하지 않기 위해 "가지치기"등을 활용해야함
+"유망함(Promising)"
+방문 중인 노드에서 하위 노드가 해답을 발견할 가능성이 있으면 유망(promising)
+하위 노드에서 해답을 발견할 가능성이 없으면 유망하지 않음(nonpromising)
+백트랙킹과 가지치기(pruning)
+백트랙킹 : 상태공간트리를 DFS로 탐색
+방문 중인 노드가 유망한지 체크
+만약 유망하지 않으며, 부모 노드로 되돌아감(backtrack)
+
+가지치기(pruning)
+유망하지 않으면 하위 트리를 가지치기 함
+가지치기한 상태 : 방문한 노드의 방문하지 않는 하위 트리(pruned state)
+
+
+#일반적인 백트랙킹 알고리즘
+void checknode(node v)    // 여기서 v는 현재 방문중인 노드
+{
+    node u;
+    if(promising(v))
+        if(v에 해답이 있으면)
+            해답을 출력;
+        else
+            for (v의 모든 자식 노드 u에 대해서)
+                checknode(u);
+}
+
+#백트랙킹 알고리즘 구현
+상태공간트리를 실제로 구현할 필요는 없음
+현재 조사중인 가지의 값에 대해 추적만 하면 된다.
+상태공간트리는 암묵적으로 존재한다고 이해하면 된다.
+
+
+
+
+
+
+
+
+1.n자리 k진수
+
+def recur(depth):
+    if depth == n:
+        for i in arr:
+            print(i,end=" ")
+        print()
+        return
+
+    
+    for i in range(k):
+        arr.append(i)
+        recur(depth+1)
+        arr.pop()
+
+
+
+n,k = map(int,input().split())
+
+
+arr = []
+
+recur(0)
+
+
+
+
+2.중복없는 "순열"
+
+def recur(depth):
+    if depth == k:
+        for i in range(k):
+            print(arr[i],end=" ")
+        print()
+        return
+    
+    for i in range(1,n+1):
+        if visited[i]:
+            continue
+
+        visited[i] = True
+        arr.append(i)
+        recur(depth+1)
+        arr.pop()
+        visited[i] = False
+
+
+n,k = map(int,input().split())
+
+
+arr = []
+visited = [0 for _ in range(n+1)]
+recur(0)
+
+
+3.중복없는 "조합"
+
+def recur(depth,start):
+    if depth == k:
+        for i in range(k):
+            print(arr[i],end=" ")
+        print()
+        return
+    
+    for i in range(start,n+1):
+        if visited[i]:
+            continue
+        
+        visited[i]=True
+        arr.append(i)
+        recur(depth+1,i+1)
+        arr.pop()
+        visited[i]=False
+
+
+
+n,k = map(int,input().split())
+
+
+arr = []
+
+visited = [0 for _ in range(n+1)]
+
+recur(0,1)
+
+
+
+
+4.선택지 2개
+
+def recur(cur):
+    if cur == n:
+        for i in arr:
+            print(i,end=" ")
+        print()
+        return
+    
+    arr.append(cur)
+    recur(cur+1)
+    arr.pop()
+    recur(cur+1)
+
+n = int(input())
+
+arr = []
+
+recur(0)

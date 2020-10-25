@@ -1,22 +1,23 @@
 
 
 
+#완전탐색 컨셉 생각!, 브루트 포스 방법
+
 n = int(input())
 
-f = 0
 
-for i in range(1,100):
-    if n <= k:
-        if n % i:
-            (k-n) % i+1
-        else:
-            print(1)
+x = 1
+y = 1
+
+
+for i in range(1,n):
+
+    if x == 1:
+        x = y + 1
+        y = 1
         
-        if n % i:
-            n % i
-        else:
-            print(f)
 
-
-
-f-n %i+1 if n%i else 1, n%i if n%i else f
+    else:
+        x -= 1
+        y += 1
+print(x,y)
