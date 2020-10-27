@@ -1,7 +1,1 @@
-
-
-a = "123"
-
-result = a.rjust(10," ")
-
-print(result)
+#1110번 다시 해봐!!!
